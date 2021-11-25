@@ -1,4 +1,4 @@
-name: SPECIAL REVIEW
+name: PR Gatekeeper Status
 
 on:
   pull_request:
@@ -45,7 +45,7 @@ jobs:
           re-request-when-changes-requested: true
           debug-mode: true
       - name: pr-gatekeeper
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 #&& github.event_name == 'pull_request_review'
-        uses: sergioko737/gha@master
+        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request_review'
+        uses: sergioko737/pr-gatekeeper@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
