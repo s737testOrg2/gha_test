@@ -2,6 +2,16 @@ name: SPECIAL REVIEW
 
 on:
   pull_request:
+    types:
+      [
+        assigned,
+        unassigned,
+        opened,
+        reopened,
+        synchronize,
+        review_requested,
+        review_request_removed
+      ]
   pull_request_review:
 
 jobs:
@@ -35,7 +45,7 @@ jobs:
           re-request-when-changes-requested: true
           debug-mode: true
       - name: pr-gatekeeper
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request_review'
+        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 #&& github.event_name == 'pull_request_review'
         uses: sergioko737/gha@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
