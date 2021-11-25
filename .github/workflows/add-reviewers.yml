@@ -14,3 +14,4 @@ jobs:
         reviewers: sergioko747,sergioko757
         re-request-when-approved: true
         re-request-when-changes-requested: true
+        debug-mode: true
