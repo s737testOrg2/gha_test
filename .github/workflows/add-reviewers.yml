@@ -1,0 +1,35 @@
+name: Add Reviewers
+
+on:
+  pull_request:
+  pull_request_review:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: CHECK PR FOR LOCKS
+        id: diff_check
+        run: |
+          DIFF=$(git --no-pager diff ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} -U1 | { grep 🔒 || true; })
+          echo "Diff: $DIFF"
+          if [ "$DIFF" != "" ]
+          then
+          echo "Special review required"
+          echo '::set-output name=LOCKED_LINES_PRESENT::1'
+          else
+          echo '::set-output name=LOCKED_LINES_PRESENT::0'
+          fi
+      - name: Add Reviewers
+        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1
+        uses: madrapps/add-reviewers@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: sergioko747,sergioko757
+          re-request-when-approved: true
+          re-request-when-changes-requested: true
+          debug-mode: true
