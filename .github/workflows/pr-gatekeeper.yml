@@ -21,15 +21,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: show dir
+      - name: list reviviewers
         run: |
-          ls -aR
+          USERS_REVIEW_REQUESTED_FROM=$(cat $GITHUB_EVENT_PATH | jq '.pull_request.requested_reviewers | map("@" + .login) | join(" ")')
+          echo "Reviewers: $USERS_REVIEW_REQUESTED_FROM"
       - name: pr-gatekeeper
         uses: sergioko737/gha@master
         # uses: sergioko737/rust_book/.github/actions/pr-gatekeeper@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: list reviviewers
-        run: |
-          USERS_REVIEW_REQUESTED_FROM=$(cat $GITHUB_EVENT_PATH | jq '.pull_request.requested_reviewers | map("@" + .login) | join(" ")')
-          echo "Reviewers: $USERS_REVIEW_REQUESTED_FROM"
+
