@@ -11,6 +11,6 @@ jobs:
       uses: madrapps/add-reviewers@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        reviewers: s737testOrg/s737team
+        reviewers: sergioko747,sergioko757
         re-request-when-approved: true
         re-request-when-changes-requested: true
