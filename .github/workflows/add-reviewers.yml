@@ -1,4 +1,4 @@
-name: SPECIAL REVIEW
+name: PR Gatekeeper Status
 
 on:
   pull_request:
