@@ -1,4 +1,4 @@
-name: Add Reviewers
+name: SPECIAL REVIEW
 
 on:
   pull_request:
