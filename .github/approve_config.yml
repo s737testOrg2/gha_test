@@ -5,6 +5,8 @@ approvals:
     - name: main
       minimum: 2 # optional
       from:
-        - sergioko747
-        - sergioko757
-        # - s737testOrg/s737team
+        person:
+          - sergioko747
+          - sergioko757
+        team:
+          - s737testOrg/s737team
