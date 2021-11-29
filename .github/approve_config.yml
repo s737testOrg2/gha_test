@@ -3,7 +3,7 @@ approvals:
   minimum: 1     # optional
   groups:        # optional
     - name: main
-      minimum: 1 # optional
+      minimum: 2 # optional
       from:
         - sergioko747
         - sergioko757
