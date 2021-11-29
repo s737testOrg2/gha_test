@@ -45,7 +45,7 @@ jobs:
           re-request-when-changes-requested: true
           debug-mode: true
       - name: pr-gatekeeper
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request_review'
+        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && ( github.event_name == 'pull_request_review' || github.event_name == 'pull_request' )
         uses: sergioko737/pr-gatekeeper@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
