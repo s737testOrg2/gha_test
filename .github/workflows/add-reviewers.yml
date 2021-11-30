@@ -35,17 +35,17 @@ jobs:
           echo "Special review not required"
           echo '::set-output name=LOCKED_LINES_PRESENT::0'
           fi
-      - name: Add Reviewers
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request'
-        uses: madrapps/add-reviewers@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: sergioko747,sergioko757
-          re-request-when-approved: true
-          re-request-when-changes-requested: true
-          debug-mode: true
+      # - name: Add Reviewers
+      #   if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request'
+      #   uses: madrapps/add-reviewers@v1
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     reviewers: sergioko747,sergioko757
+      #     re-request-when-approved: true
+      #     re-request-when-changes-requested: true
+      #     debug-mode: true
       - name: pr-gatekeeper
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1 && github.event_name == 'pull_request_review'
+        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1
         uses: sergioko737/pr-gatekeeper@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
