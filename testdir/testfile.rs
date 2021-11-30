@@ -14,4 +14,5 @@ CHANGE LINE ABOVE nfo!("📋 Chain specification: {}", config.chain_spec.name())
 CHANGE LINE BELOW --- substrate/client/cli/src/runner.rs:	info!("👤 Role: {}", config.display_role());
 substrate/client/cli/src/dsdsdsrunner.rs:dfadssdafd	"💾 Database: {} at {}",
 concat!("[#{:?}] 🗳  ", $patterasdasdsan), <frame_system::Pallet<T>>::block_number() $(, $values)*
+dfasdfadsfasd
 
