@@ -1,6 +1,6 @@
 👜seradfsdfdfdddffd,12342134👜",👜",👜", substrate/frame/bags-list/src/lib.rs:			concat!("[{:?}] 👜", $patter), <frame_system::Pallet<T>>::block_number() $(, $values)*
 👜", some more substrate/client/finality-grandpa/src/environment.rs:					"👴 Applying GRANDPA set change to new set with {} authorities",
-substrateasdsad/client/finality-grandpa/src/environment.rs:				afg_log!(initial_sync, "👴 Applying GRANDPA set change to new set {:?}", set_ref);
+substrateasdsaddssd/client/finality-grandpa/src/environment.rs:				afg_log!(initial_sync, "👴 Applying GRANDPA set change to new set {:?}", set_ref);
 substrate-matrix-faucet/src/bot/index.ts:    logger.warn(`🏴‍☠️ Ignored request from an ignored account: ${sender}`);
 2020-10-16 08:03:14  ✌️  version 2.0.0-47f7d3f2e-x86_64-linux-gnu🔒gnu🔒
 CHANGE LINE BELOW substrate/client/tracing/proc-macro/src/lib.rs:/// 2020-10-16 08:03:14  📋 Chain specification: Local Testnet
