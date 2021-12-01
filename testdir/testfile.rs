@@ -16,4 +16,4 @@ substrate/client/cli/src/dsdsdsrunner.rs:dfadssdafd	"💾 Database: {} at {}",
 concat!("[#{:?}] 🗳  ", $patterasdassssdsan), <frame_system::Pallet<T>>::block_number() $(, $values)*
 fdasdfdasertertrewadsadsdasdsafasdffdsgdsfdasdf
 dsdfsfdssdfdsadfsdaffadsfadssadsdsddsdasfds
-SDFDSDFFDSdffsdafsdfa
+SDFDSDFFDSdffsdafsdfaadfdasfa
