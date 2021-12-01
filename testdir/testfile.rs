@@ -10,7 +10,7 @@ substrate/client/cli/src/runner.rs:	/// 2020-06-03 16:14:21 🏷 Node name: joll
 substrate/client/cli/src/runner.rs:	/// 2020-06-03 16:14:21 👤 Role: FULL
 substrate/client/cli/src/runner.rs:	/// 2020-06-03 16:14:21 💾 Database: RocksDb at /tmp/c/chains/flamingfir7/db
 CHANGE LINE ABOVE nfo!("📋 Chain specificatsfdfdsion: {}", config.chain_spec.name());
-# 🔒substratssssssaasae/client/cli/src/runner.rs🔒	info!("🏷 Node name: {}", config.network.node_name);k
+# 🔒substratssssssaasdfasasae/client/cli/src/runner.rs🔒	info!("🏷 Node name: {}", config.network.node_name);k
 CHANGE LINE BELOW --- substrate/client/cli/src/runner.rs:	info!("👤 Role: {}", config.display_role());
 substrate/client/cli/src/dsdsdsrunner.rs:dfadssdafd	"💾 Database: {} at {}",
 concat!("[#{:?}] 🗳  ", $patterasdassssdsan), <frame_system::Pallet<T>>::block_number() $(, $values)*
@@ -18,4 +18,4 @@ fdasdfdasertertrewadsadsdasdsafasdffdsgdsfdasdf
 dsdfsfdssdfdsadfsdaffadsfadssadsdsddsdasfds
 sd
 sdfdsafddsafdsfdfasfsadfewsasdfgfdgfg
-cfsdfsdfds
+cfsdfsdfdsdsafadsfdasasdfdsfgdfsg
