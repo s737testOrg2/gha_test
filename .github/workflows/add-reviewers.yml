@@ -48,4 +48,4 @@ jobs:
         if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1
         uses: sergioko737/pr-gatekeeper@master
         with:
-          token: ${{ secrets.GHA_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
