@@ -1,4 +1,4 @@
-rerequest_review: true
+rerequest_review: false
 approvals:
   # check will fail if there is no approval
   minimum: 1     # optional replicates GitHub branch protection
