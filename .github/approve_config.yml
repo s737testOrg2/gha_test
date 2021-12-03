@@ -1,6 +1,7 @@
+rerequest_review: true
 approvals:
   # check will fail if there is no approval
-  minimum: 1     # optional
+  minimum: 1     # optional replicates GitHub branch protection
   groups:        # optional
     - name: main
       minimum: 2 # optional
@@ -8,5 +9,5 @@ approvals:
         person:
           - sergioko747
           - sergioko757
-        team:
+        team: 
           - s737team
