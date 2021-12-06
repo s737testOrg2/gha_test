@@ -25,7 +25,7 @@ jobs:
       - name: CHECK PR FOR LOCKS
         id: diff_check
         run: |
-          DIFF=$(git --no-pager diff ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} -U1 | { grep 🔒 || true; })
+          DIFF=$(git --no-pager diff ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} -U1 | { grep 🔒 || true; })
           echo "Diff: $DIFF"
           if [ "$DIFF" != "" ]
           then
