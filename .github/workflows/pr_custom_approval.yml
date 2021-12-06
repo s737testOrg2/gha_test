@@ -40,4 +40,5 @@ jobs:
         uses: sergejparity/pr-custom-review@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          custom_review_required: ${{ steps.condition_check.outputs.CUSTOM_REVIEW_REQUIRED }}
+        env:
+          CUSTOM_REVIEW_REQUIRED: ${{ steps.condition_check.outputs.CUSTOM_REVIEW_REQUIRED }}
