@@ -30,10 +30,10 @@ jobs:
           if [ "$DIFF" != "" ]
           then
           echo "Special review required"
-          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::1'
+          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::required'
           else
           echo "Special review not required"
-          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::0'
+          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::not_required'
           fi
       - name: pr-custom-review
         # if: steps.diff_check.outputs.CUSTOM_REVIEW_REQUIRED == 1
