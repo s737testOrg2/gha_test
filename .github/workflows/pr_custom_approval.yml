@@ -23,20 +23,22 @@ jobs:
         with:
           fetch-depth: 0
       - name: CHECK PR FOR LOCKS
-        id: diff_check
+        id: condition_check
         run: |
           DIFF=$(git --no-pager diff ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} -U1 | { grep 🔒 || true; })
           echo "Diff: $DIFF"
           if [ "$DIFF" != "" ]
           then
           echo "Special review required"
-          echo '::set-output name=LOCKED_LINES_PRESENT::1'
+          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::required'
           else
           echo "Special review not required"
-          echo '::set-output name=LOCKED_LINES_PRESENT::0'
+          echo '::set-output name=CUSTOM_REVIEW_REQUIRED::not_required'
           fi
       - name: pr-custom-review
-        if: steps.diff_check.outputs.LOCKED_LINES_PRESENT == 1
+        # if: steps.diff_check.outputs.CUSTOM_REVIEW_REQUIRED == 1
         uses: sergejparity/pr-custom-review@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          CUSTOM_REVIEW_REQUIRED: ${{ steps.condition_check.outputs.CUSTOM_REVIEW_REQUIRED }}
