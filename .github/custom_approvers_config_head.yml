@@ -1,0 +1,10 @@
+approvals:
+  # check will fail if there is no approval
+  minimum: 1     # optional replicates GitHub branch protection
+  groups:        # optional
+    - name: main
+      minimum: 1 # optional
+      from:
+        person:
+          - sergioko747
+          # - sergioko757
