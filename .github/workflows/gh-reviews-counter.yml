@@ -1,0 +1,17 @@
+name: github-action-reviews-counter
+
+on:
+  pull_request:
+    types:
+      - 'labeled'
+      - 'ready_for_review'
+  pull_request_review:
+
+jobs:
+  your-action:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - id: 'reviews'
+        uses: 'jrylan/github-action-reviews-counter@main'
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
