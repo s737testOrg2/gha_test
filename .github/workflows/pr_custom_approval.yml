@@ -1,4 +1,4 @@
-name: PR Custom Review Status
+name: PR Custom Review Status NEW NAME
 
 on:
   pull_request:
@@ -36,7 +36,6 @@ jobs:
           echo '::set-output name=CUSTOM_REVIEW_REQUIRED::not_required'
           fi
       - name: pr-custom-review
-        # if: steps.diff_check.outputs.CUSTOM_REVIEW_REQUIRED == 1
         uses: sergejparity/pr-custom-review@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
