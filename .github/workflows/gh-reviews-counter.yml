@@ -1,17 +1,25 @@
 name: github-action-reviews-counter
 
 on:
-  pull_request:
-    types:
-      - 'labeled'
-      - 'ready_for_review'
   pull_request_review:
 
 jobs:
-  your-action:
-    runs-on: 'ubuntu-latest'
+  test:
+    runs-on: ubuntu-latest
+    name: test
     steps:
-      - id: 'reviews'
-        uses: 'jrylan/github-action-reviews-counter@main'
+      - name: review
+        uses: buildsville/review-summary@v1
+        id: summary
         with:
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: print review summary
+        run: |
+          echo "APPROVE: ${{ steps.summary.outputs.approved }}"
+          echo "REQUEST_CHANGES: ${{ steps.summary.outputs.changes_requested }}"
+          echo "COMMENT: ${{ steps.summary.outputs.commented }}"
+          echo "PENDING: ${{ steps.summary.outputs.pending }}"
+      - name: print if more than 2 approve
+        if: steps.summary.outputs.approved > 2
+        run: |
+          echo "Got more than 2 approve!!!"
