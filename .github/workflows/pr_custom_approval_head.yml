@@ -38,7 +38,7 @@ jobs:
       - name: pr-custom-review
         uses: sergejparity/pr-custom-review@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GHA_TOKEN }}
           config-file: './.github/custom_approvers_config_head.yml'
         env:
           CUSTOM_REVIEW_REQUIRED: ${{ steps.condition_check.outputs.CUSTOM_REVIEW_REQUIRED }}
