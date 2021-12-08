@@ -5,6 +5,7 @@ approvals:
     - name: main
       minimum: 2 # optional
       from:
-        person:
+        persons:
           - sergioko747
           - sergioko757
+        teams:
