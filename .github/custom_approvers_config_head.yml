@@ -3,8 +3,8 @@ approvals:
   minimum: 1     # optional replicates GitHub branch protection
   groups:        # optional
     - name: main
-      minimum: 1 # optional
+      minimum: 2 # optional
       from:
-        person:
-          - sergioko747
-          # - sergioko757
+        persons:
+        teams:
+          - s737team
