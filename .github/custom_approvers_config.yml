@@ -1,18 +1,6 @@
-# approvals:
-#   # check will fail if there is no approval
-#   minimum: 1     # optional replicates GitHub branch protection
-#   groups:        # optional
-#     - name: main
-#       minimum: 1 # optional
-#       from:
-#         persons:
-#           - sergioko747
-#           - sergioko757
-#         teams:
-
 approval_groups:
   - name: HEADS
-    condition: ^[\+|\-].*👤
+    condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: pr_diff_body
     min_approvals: 2
     users:
@@ -24,7 +12,6 @@ approval_groups:
     min_approvals: 1
     users:
       - sergioko747
+      - sergioko737
+      - sergioko757
     teams:
-
-
-# var regEx = /^(0[1-9]|1[0-2])\/\d{4}$/g;
