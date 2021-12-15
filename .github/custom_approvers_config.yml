@@ -12,16 +12,19 @@
 
 approval_groups:
   - name: HEADS
-    condition: /👤.*(\n^[+|-].*)|^[+|-].*👤/gm
+    condition: /👤.*(\/\n^[+|-].*)|^[+|-].*👤/gm
     check_type: pr_diff_body
     min_approvals: 2
     users:
     teams:
       - s737team
   - name: BAGS
-    condition: /👜.*(\\n^[\\+|\\-].*)|^[\\+|\\-].*👜/gm
+    condition: /👜.*(\/\n^[\/\+|\/\-].*)|^[\/\+|\/\-].*👜/gm
     check_type: pr_diff_body
     min_approvals: 1
     users:
       - sergioko747
     teams:
+
+
+# var regEx = /^(0[1-9]|1[0-2])\/\d{4}$/g;
