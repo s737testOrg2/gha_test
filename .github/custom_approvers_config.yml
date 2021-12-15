@@ -12,7 +12,7 @@
 
 approval_groups:
   - name: HEADS
-    condition: "'/👤.*(\/\n^[+|-].*)|^[+|-].*👤/', 'gm'"
+    condition: "/👤.*(\/\n^[+|-].*)|^[+|-].*👤/, gm"
     check_type: pr_diff_body
     min_approvals: 2
     users:
