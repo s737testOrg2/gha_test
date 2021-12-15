@@ -19,7 +19,7 @@ approval_groups:
     teams:
       - s737team
   - name: BAGS
-    condition: '/👜.*(\n^[\+|\-].*)|^[\+|\-].*👜/gm'
+    condition: '👜.*(\n^[\+|\-].*)|^[\+|\-].*👜'
     check_type: pr_diff_body
     min_approvals: 1
     users:
