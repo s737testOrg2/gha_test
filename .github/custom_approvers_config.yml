@@ -12,14 +12,14 @@
 
 approval_groups:
   - name: HEADS
-    condition: 👤
+    condition: /👤.*(\\n^[\\+|\\-].*)|^[\\+|\\-].*👤/gm
     check_type: pr_diff_body
     min_approvals: 2
     users:
     teams:
       - s737team
   - name: BAGS
-    condition: '👜.*(\n^[\+|\-].*)|^[\+|\-].*👜'
+    condition: /👜.*(\\n^[\\+|\\-].*)|^[\\+|\\-].*👜/gm
     check_type: pr_diff_body
     min_approvals: 1
     users:
