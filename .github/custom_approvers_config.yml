@@ -13,6 +13,7 @@
 approval_groups:
   - name: HEADS
     condition: /👤.*(\n^[\+|\-].*)|^[\+|\-].*👤/gm
+    check_type: diff
     min_approvals: 2
     users:
     teams:
