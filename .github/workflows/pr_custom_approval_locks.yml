@@ -1,4 +1,4 @@
-name: PR Custom Review Status - LOCKS
+name: PR Custom Review Status
 
 on:
   pull_request:
