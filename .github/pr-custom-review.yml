@@ -15,6 +15,7 @@ approval_groups:
       - sergioko737
       - sergioko757
       - sergejparity
+      - tripleight
     teams:
   - name: FILES
     condition: .*/runtime/.*lib.rs
