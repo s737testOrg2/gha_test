@@ -1,0 +1,27 @@
+name: PR Custom Review Status
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - review_requested
+      - review_request_removed
+  pull_request_review:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: pr-custom-review
+        uses: paritytech/pr-custom-review@sk-update-action
+        with:
+          token: ${{ secrets.GHA_TOKEN }}

@@ -7,16 +7,17 @@ approval_groups:
     teams:
       - s737team
   - name: BAGS
-    condition: 👜.*(\n^[\+|\-].*)|^[\+|\-].*👜
+    condition: /👜.*(\n^[\+|\-].*)|^[\+|\-].*👜/
     check_type: pr_diff
     min_approvals: 1
     users:
       - sergioko747
       - sergioko737
       - sergioko757
+      - sergejparity
     teams:
   - name: FILES
-    condition: .*/runtime/.*lib.rs
+    condition: .*/runtime/.*lib.rs|.gitlab-ci.yml
     check_type: pr_files
     min_approvals: 2
     users:
