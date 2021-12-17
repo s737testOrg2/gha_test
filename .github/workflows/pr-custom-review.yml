@@ -22,6 +22,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: pr-custom-review
-        uses: sergejparity/pr-custom-review@master
+        uses: paritytech/pr-custom-review@sk-update-action
         with:
           token: ${{ secrets.GHA_TOKEN }}
