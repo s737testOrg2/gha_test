@@ -1,4 +1,4 @@
-👜seFGFGFradfsdfdfdddffd,12342134👜",👜",👜", substrate/frame/bags-list/src/lib.rs:			concat!("[{:?}] 👜", $patter), <frame_system::Pallet<T>>::block_number() $(, $values)*
+👜seFGFGFradfsdfdfdddffd,12342134👜",👜",👜", substrate/frame/bags-list/src/lib.rs:d			concat!("[{:?}] 👜", $patter), <frame_system::Pallet<T>>::block_number() $(, $values)*
 👜", some mofdsafdsre substrate/client/finality-grandpa/src/environment.rs:					"👴 Applying GRANDPA set change to new set with {} authorities",
 substrateasdsaddssddasfdsaf/client/finality-grandpa/src/environment.rs:				afg_log!(initial_sync, "👴 Applying GRANDPA set change to new set {:?}", set_ref);
 substrate-matrix-faucet/src/bot/index.ts:    logger.warn(`🏴‍☠️ Ignored request from an ignored account: ${sender}`);fsd
@@ -12,7 +12,7 @@ substrate/client/traciadfdsafng/proc-macro/src/lib.rs:/// 2020-10-16 08:03:14  �
 CHANGE LINE ABOVE nfo!("📋 Chain specificatsfdfdsion: {}", config.chain_spec.name());
 🔒substratssssdfdssaasdfasasaedsafds/client/dsdsdcli/src/runner.rs🔒	info!("🏷 Node name: {}", config.network.node_name);kcdsfsdfsd
 CHANGE LINE BELOW ---sss subsdasfadstrate/client/cli/src/runner.rs:	info!("👤 Role: {}", config.display_role());
-dsdssubstrate/client/cli/src/dsdsdsrunner.rs:dfadssdafd	"💾 Database: {} at {}",
+dsdssubstrate/client/cli/src/dsdsdsrunner.rs:dfadssdafd	"💾 Database: {} at {}",d
 concat!("[#{:?}] 🗳  ", $patterasdassssdsan), <frame_system::Pallet<T>>::block_number() $(, $values)*
 fdasdfdasertertrewadsadsdasdsafasdffdsgdsfdasdf
 dsdfsfdssdfdsadfsdaffadsfadssadsdsdds
