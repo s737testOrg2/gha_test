@@ -4,6 +4,10 @@ approval_groups:
     check_type: pr_diff
     min_approvals: 2
     users:
+      - sergioko747
+      - sergioko737
+      - sergioko757
+      - sergejparity
     teams:
       - s737team
   - name: BAGS
@@ -16,10 +20,15 @@ approval_groups:
       - sergioko757
       - sergejparity
     teams:
+      - s737team
   - name: FILES
     condition: .*/runtime/.*lib.rs|.gitlab-ci.yml
     check_type: pr_files
     min_approvals: 2
     users:
+      - sergioko747
+      - sergioko737
+      - sergioko757
+      - sergejparity
     teams:
       - s737team
