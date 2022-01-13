@@ -1,4 +1,4 @@
-approval_rules:
+rules:
   - name: HEADS
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: pr_diff
