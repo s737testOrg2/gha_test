@@ -17,11 +17,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: pr-custom-review
-        uses: sergejparity/pr-custom-review@jp-version
+        uses: sergejparity/pr-custom-review@enhance-builtin-check
         with:
           token: ${{ secrets.GHA_TOKEN }}
+          locks-review-team: s737team
+          team-leads-team: s737team
