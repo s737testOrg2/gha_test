@@ -2,7 +2,7 @@ rules:
   - name: HEADS
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: diff
-    all:
+    any:
       - min_approvals: 2
         users:
           - sergejparity
