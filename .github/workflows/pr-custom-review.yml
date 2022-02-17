@@ -1,4 +1,4 @@
-name: PR Custom Review Status
+name: Check reviews
 
 on:
   pull_request:
