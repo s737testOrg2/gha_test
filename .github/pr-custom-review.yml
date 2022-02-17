@@ -2,8 +2,8 @@ rules:
   - name: HEADS
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: diff
-    any:
-      - min_approvals: 2
+    all:
+      - min_approvals: 1
         users:
           - sergejparity
       - min_approvals: 2
