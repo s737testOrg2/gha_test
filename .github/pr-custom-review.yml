@@ -2,14 +2,15 @@ rules:
   - name: HEADS
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: diff
-    min_approvals: 2
-    users:
-      - sergioko747
-      - sergioko737
-      - sergioko757
-      - sergejparity
-    teams:
-      - s737team
+    all:
+      - min_approvals:
+        users:
+          - sergioko747
+          - sergioko737
+          - sergioko757
+          - sergejparity
+        teams:
+          - s737team
   - name: BAGS
     condition: 👜.*(\n^[\+|\-].*)|^[\+|\-].*👜
     check_type: diff
@@ -23,7 +24,12 @@ rules:
   - name: FILES
     condition: .*/runtime/.*lib.rs|.gitlab-ci.yml
     check_type: changed_files
-    min_approvals: 2
-    users:
-    teams:
-      - s737team
+    any:
+      - min_approvals: 2
+        users:
+          - sergioko747
+          - sergioko737
+          - sergioko757
+          - sergejparity
+        teams:
+          - s737team
