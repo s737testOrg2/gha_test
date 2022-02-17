@@ -22,5 +22,5 @@ jobs:
         with:
           token: ${{ secrets.GHA_TOKEN }}
           locks-review-team: s737team
-          # team-leads-team: s737team
-          # action-review-team: s737team
+          team-leads-team: s737team
+          action-review-team: s737team
