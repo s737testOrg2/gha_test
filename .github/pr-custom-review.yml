@@ -3,11 +3,8 @@ rules:
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: diff
     all:
-      - min_approvals:
+      - min_approvals: 2
         users:
-          - sergioko747
-          - sergioko737
-          - sergioko757
           - sergejparity
         teams:
           - s737team
