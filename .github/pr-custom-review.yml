@@ -3,9 +3,6 @@ rules:
     condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
     check_type: diff
     all:
-      - min_approvals: 1
-        users:
-          - sergejparity
       - min_approvals: 2
         teams:
           - s737team
@@ -18,7 +15,6 @@ rules:
       - sergioko737
       - sergioko757
       - sergejparity
-    teams:
   - name: FILES
     condition: .*/runtime/.*lib.rs|.gitlab-ci.yml
     check_type: changed_files
