@@ -1,0 +1,30 @@
+rules:
+  - name: HEADS
+    condition: 👤.*(\n^[\+|\-].*)|^[\+|\-].*👤
+    check_type: diff
+    all:
+      - min_approvals: 2
+        teams:
+          - s737team
+  - name: BAGS
+    condition: 👜.*(\n^[\+|\-].*)|^[\+|\-].*👜
+    check_type: diff
+    min_approvals: 1
+    users:
+      - sergioko747
+      - sergioko737
+      - sergioko757
+      - sergejparity
+  - name: FILES
+    condition: .*/runtime/.*lib.rs|.gitlab-ci.yml
+    check_type: changed_files
+    any:
+      - min_approvals: 1
+        users:
+          - sergioko747
+          - sergioko737
+          - sergioko757
+          - sergejparity
+      - min_approvals: 1
+        teams:
+          - s737team
