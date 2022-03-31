@@ -4,12 +4,14 @@ rules:
     check_type: diff
     all:
       - min_approvals: 2
+        review_request: true
         teams:
           - s737team
   - name: BAGS
     condition: 👜.*(\n^[\+|\-].*)|^[\+|\-].*👜
     check_type: diff
     min_approvals: 1
+    review_request: false
     users:
       - sergioko747
       - sergioko737
@@ -20,11 +22,13 @@ rules:
     check_type: changed_files
     any:
       - min_approvals: 1
+        review_request: false
         users:
           - sergioko747
           - sergioko737
           - sergioko757
           - sergejparity
       - min_approvals: 1
+        review_request: false
         teams:
           - s737team
