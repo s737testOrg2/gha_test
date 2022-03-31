@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pr-custom-review
-        uses: sergioko737/pr-custom-review@test
+        uses: sergioko737/pr-custom-review@testit
         with:
           token: ${{ secrets.GHA_TOKEN }}
           locks-review-team: s737team
