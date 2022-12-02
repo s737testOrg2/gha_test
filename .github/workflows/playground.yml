@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "------------------My ORG is --- $GITHUB_REPOSITORY_OWNER ---"
           echo "------------------test curl------------------"
-          curl "https://github.com/$GITHUB_REPOSITORY_OWNER/gha_test/master/testdir/testfile3"
+          curl "https://raw.githubusercontent.com/$GITHUB_REPOSITORY_OWNER/gha_test/master/testdir/testfile3"
           echo "------------------test ENV from script------------------"
           ls -al
           bash ./test_script/test.sh
